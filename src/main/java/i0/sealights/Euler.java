@@ -1,23 +1,21 @@
-package org.example;
+package i0.sealights;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println(problem1(0, 1000)); //233168
-        System.out.println(problem2(1, 2, 4000000)); //4613732
-    }
-    public static long problem1(int min, int max) {
+public class Euler {
+    private static final int div_1 = 3;
+    private static final int div_2 = 5;
+    public long sumMultiplesInRange(int min, int max) {
         long sum = 0;
          for (int i = min; i < max; i++) {
-            if (i % 3 == 0){
+            if (i % div_1 == 0){
                 sum += i;
             }
-            else if (i % 5 == 0){
+            else if (i % div_2 == 0){
                 sum += i;
             }
         }
         return sum;
     }
-    public static long problem2(int first1, int first2, int max){
+    public long sumEvenFibonacciInRange(int first1, int first2, int max){
         long sum = 0;
         if (first1 % 2 == 0){
             sum += first1;
