@@ -4,8 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 public class EulerTest {
     private Euler eulerSolver = new Euler();
-    @Test
-    void correctlyCalculateMultiplesInRange() {
+    @ParameterizedTest
+    @CsvSource({"233168,0,1000", "23316,0,1000", "233168,0,100"})
+    void correctlyCalculateMultiplesInRange(long expectation, int min, int max) {
         assertEquals(233168, eulerSolver.sumMultiplesInRange(0, 1000));
     }
     @Test
