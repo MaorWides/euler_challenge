@@ -20,13 +20,8 @@
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-<<<<<<< HEAD
             <artifactId>junit-jupiter-params</artifactId>
             <version>RELEASE</version>
-=======
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit5.version}</version>
->>>>>>> dfe63352a915a3d44fff09a67b99c84644efb55a
             <scope>test</scope>
         </dependency>
         <dependency>
