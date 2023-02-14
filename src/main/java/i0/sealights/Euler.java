@@ -35,4 +35,7 @@ public class Euler {
         }
         return sum;
     }
+    public int largesPrimeFactor(long number){
+        return Integer.parseInt(String.valueOf(number).substring(0, 4));
+    }
 }
