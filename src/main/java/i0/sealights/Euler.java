@@ -36,6 +36,21 @@ public class Euler {
         return sum;
     }
     public int largesPrimeFactor(long number){
-        return Integer.parseInt(String.valueOf(number).substring(0, 4));
+        int max = -1;
+        for (int i = 2; i <= Math.sqrt(number); i++){
+            if (isPrime(i) && number % i == 0){
+                max = i;
+            }
+        }
+        return max;
+    }
+
+    public boolean isPrime(int number) {
+        for (int i = 2; i <= Math.sqrt(number); i++){
+            if (number % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 }

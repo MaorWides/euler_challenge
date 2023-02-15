@@ -2,6 +2,7 @@ package i0.sealights;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -16,5 +17,10 @@ public class EulerParameterizedTest {
     @CsvSource({"10,1,2,10", "44,1,2,100", "4613732,1,2,4000000", "10,1,2,20", "188,1,2,200", "798,1,2,2000", "10,1,2,23", "188,1,2,234", "798,1,2,2345"})
     void correctlyCalculateFibonacciInRange(long expected, int first1, int first2, int max) {
         assertEquals(expected, eulerSolver.sumEvenFibonacciInRange(first1, first2, max));
+    }
+    @ParameterizedTest
+    @CsvSource({"29, 13195", "6857, 600851475143"})
+    void correctlyCalculateLargestPrime(int expected, long number){
+        assertEquals(expected, eulerSolver.largesPrimeFactor(number));
     }
 }
