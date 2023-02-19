@@ -45,7 +45,7 @@ public class Euler {
         return max;
     }
 
-    public boolean isPrime(int number) {
+    public boolean isPrime(long number) {
         for (int i = 2; i <= Math.sqrt(number); i++){
             if (number % i == 0){
                 return false;

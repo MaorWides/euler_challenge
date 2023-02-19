@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2f42dff-b36c-4049-866b-f610ebafddf0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerBaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/Euler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/Euler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerParameterizedTest.java" afterDir="false" />
@@ -49,11 +49,29 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="i0.sealights" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="i0.sealights" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EulerParameterizedTest.correctlyCalculateLargestPrime">
+  <component name="RunManager" selected="JUnit.EulerParameterizedTest">
+    <configuration name="EulerParameterizedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="euler_challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="i0.sealights.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="i0.sealights" />
+      <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerParameterizedTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EulerParameterizedTest.correctlyCalculateLargestPrime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="euler_challenge" />
       <extension name="coverage">
@@ -70,11 +88,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EulerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EulerParameterizedTest.correctlyDetermineIfANumberIsPrime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="euler_challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="i0.sealights.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="PACKAGE_NAME" value="i0.sealights" />
-      <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerParameterizedTest" />
+      <option name="METHOD_NAME" value="correctlyDetermineIfANumberIsPrime(long)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,22 +115,6 @@
       <option name="PACKAGE_NAME" value="i0.sealights" />
       <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerTest" />
       <option name="METHOD_NAME" value="correctlyCalculateFibonacciInRange(long,int,int,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EulerTest.correctlyCalculateMultiplesInRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="euler_challenge" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="i0.sealights.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="i0.sealights" />
-      <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerTest" />
-      <option name="METHOD_NAME" value="correctlyCalculateMultiplesInRange(long,int,int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EulerParameterizedTest" />
+        <item itemvalue="JUnit.EulerParameterizedTest.correctlyDetermineIfANumberIsPrime" />
         <item itemvalue="JUnit.EulerParameterizedTest.correctlyCalculateLargestPrime" />
         <item itemvalue="JUnit.EulerTest.p3" />
         <item itemvalue="JUnit.EulerTest.correctlyCalculateFibonacciInRange" />
-        <item itemvalue="JUnit.EulerTest.correctlyCalculateMultiplesInRange" />
-        <item itemvalue="JUnit.EulerTest" />
       </list>
     </recent_temporary>
   </component>
