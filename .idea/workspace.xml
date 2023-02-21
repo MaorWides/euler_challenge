@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2f42dff-b36c-4049-866b-f610ebafddf0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerBaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/Euler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/Euler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerParameterizedTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
