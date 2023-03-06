@@ -3,6 +3,7 @@ package i0.sealights;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,8 +27,14 @@ public class EulerParameterizedTest extends EulerBaseTest{
         assertEquals(expected, eulerSolver.largesPrimeFactor(number));
     }
     @ParameterizedTest
-    @ValueSource(longs = {29, 6857})
+    @ValueSource(longs = {29, 6857, 2, 3, 5})
     void correctlyDetermineIfANumberIsPrime(long number){
         assertTrue(eulerSolver.isPrime(number));
+    }
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = { " ", "   ", "\t", "\n" })
+    void EnterNullIntoPrimeCheck(String number){
+        assertTrue(eulerSolver.isStringEuler(number));
     }
 }

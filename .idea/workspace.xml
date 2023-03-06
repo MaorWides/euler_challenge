@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2f42dff-b36c-4049-866b-f610ebafddf0" name="Changes" comment="" />
+    <list default="true" id="d2f42dff-b36c-4049-866b-f610ebafddf0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/Euler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/Euler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerParameterizedTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +33,9 @@
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2LPOmcctyVpvuZeWI54GL7kSNPs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

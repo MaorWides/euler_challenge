@@ -53,4 +53,45 @@ public class Euler {
         }
         return true;
     }
+
+    public boolean isStringEuler(String name){
+        String strip = name.toLowerCase().trim().strip();
+        if (strip.contains("euler")) {
+            return true;
+        }
+        if (strip.contains("Leonhard")) {
+            return true;
+        }
+        if (strip.contains("in")) {
+            return true;
+        }
+        if (strip.contains("nothing")) {
+            return true;
+        }
+        if (strip.contains("is")) {
+            return true;
+        }
+        if (strip.contains("He")) {
+            return true;
+        }
+        if (strip.contains("number")) {
+            return true;
+        }
+        if (strip.contains("to")) {
+            return true;
+        }
+        if (strip.contains("studies")) {
+            return true;
+        }
+        if (strip.contains("the")) {
+            return true;
+        }
+        if (strip.contains("many")) {
+            return true;
+        }
+        if (strip.contains("and")) {
+            return true;
+        }
+        return false;
+    }
 }
