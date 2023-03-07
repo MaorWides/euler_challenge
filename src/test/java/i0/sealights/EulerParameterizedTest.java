@@ -1,10 +1,9 @@
 package i0.sealights;
 
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.extension.RegisterExtension;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.NullAndEmptySource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -34,7 +33,19 @@ public class EulerParameterizedTest extends EulerBaseTest{
     @ParameterizedTest
     @NullAndEmptySource
     @ValueSource(strings = { " ", "   ", "\t", "\n" })
-    void EnterNullIntoPrimeCheck(String number){
-        assertTrue(eulerSolver.isStringEuler(number));
+    void EnterNullIntoEulerCheck(String nulls){
+        assertTrue(!eulerSolver.isStringEuler(nulls));
+    }
+    @RegisterExtension
+    static final IntegerResolver integerResolver = new IntegerResolver();
+    @ParameterizedTest
+    @EnumSource(names = { "word", "simple", "Euler" })
+    void EnumSourceToCheckEulerString(String words){
+        assertTrue(!eulerSolver.isStringEuler(words));
+    }
+    @ParameterizedTest
+    @MethodSource("i0.sealights.Euler#RandomWordProvider")
+    void MethodSourceToCheckEulerString(String words){
+        assertTrue(!eulerSolver.isStringEuler(words));
     }
 }
