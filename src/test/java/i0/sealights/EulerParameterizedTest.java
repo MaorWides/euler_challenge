@@ -36,16 +36,14 @@ public class EulerParameterizedTest extends EulerBaseTest{
     void EnterNullIntoEulerCheck(String nulls){
         assertTrue(!eulerSolver.isStringEuler(nulls));
     }
-    @RegisterExtension
-    static final IntegerResolver integerResolver = new IntegerResolver();
     @ParameterizedTest
     @EnumSource(names = { "word", "simple", "Euler" })
     void EnumSourceToCheckEulerString(String words){
-        assertTrue(!eulerSolver.isStringEuler(words));
+        assertTrue(eulerSolver.isStringEuler(words));
     }
     @ParameterizedTest
-    @MethodSource("i0.sealights.Euler#RandomWordProvider")
+    @MethodSource("RandomWordProvider")
     void MethodSourceToCheckEulerString(String words){
-        assertTrue(!eulerSolver.isStringEuler(words));
+        assertTrue(eulerSolver.isStringEuler(words));
     }
 }

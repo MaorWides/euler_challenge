@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2f42dff-b36c-4049-866b-f610ebafddf0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/LazerData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/Euler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/Euler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/i0/sealights/EulerBaseTest.java" afterDir="false" />
@@ -39,7 +43,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2LPOmcctyVpvuZeWI54GL7kSNPs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,7 +65,7 @@
       <recent name="i0.sealights" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EulerParameterizedTest">
+  <component name="RunManager" selected="JUnit.EulerParameterizedTest.EnumSourceToCheckEulerString">
     <configuration name="EulerParameterizedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="euler_challenge" />
       <extension name="coverage">
@@ -91,6 +97,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EulerParameterizedTest.EnumSourceToCheckEulerString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="euler_challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="i0.sealights.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="i0.sealights" />
+      <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerParameterizedTest" />
+      <option name="METHOD_NAME" value="EnumSourceToCheckEulerString(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EulerParameterizedTest.MethodSourceToCheckEulerString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="euler_challenge" />
       <extension name="coverage">
@@ -102,22 +124,6 @@
       <option name="PACKAGE_NAME" value="i0.sealights" />
       <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerParameterizedTest" />
       <option name="METHOD_NAME" value="MethodSourceToCheckEulerString(java.lang.String)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EulerParameterizedTest.correctlyCalculateLargestPrime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="euler_challenge" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="i0.sealights.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="i0.sealights" />
-      <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerParameterizedTest" />
-      <option name="METHOD_NAME" value="correctlyCalculateLargestPrime(int,long)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EulerParameterizedTest" />
+        <item itemvalue="JUnit.EulerParameterizedTest.EnumSourceToCheckEulerString" />
         <item itemvalue="JUnit.EulerParameterizedTest.MethodSourceToCheckEulerString" />
+        <item itemvalue="JUnit.EulerParameterizedTest" />
         <item itemvalue="JUnit.EulerParameterizedTest.EnterNullIntoEulerCheck" />
         <item itemvalue="JUnit.EulerParameterizedTest.correctlyDetermineIfANumberIsPrime" />
-        <item itemvalue="JUnit.EulerParameterizedTest.correctlyCalculateLargestPrime" />
       </list>
     </recent_temporary>
   </component>
