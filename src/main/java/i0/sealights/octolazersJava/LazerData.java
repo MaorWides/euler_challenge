@@ -1,23 +1,42 @@
 package i0.sealights.octolazersJava;
+import java.util.Random;
 
 public class LazerData {
-    public Direction GridDirection;
-    public int Position;
+    public Direction gridDirection;
+    public int position;
     public LazerData(Direction gridDirection, int position) {
-        GridDirection = gridDirection;
-        Position = position;
+        this.gridDirection = gridDirection;
+        this.position = position;
     }
     public LazerData(int position, Direction gridDirection) {
-        GridDirection = gridDirection;
-        Position = position;
+        this.gridDirection = gridDirection;
+        this.position = position;
     }
+
+    public Direction getGridDirection() {
+        return gridDirection;
+    }
+
+    public void setGridDirection(Direction gridDirection) {
+        this.gridDirection = gridDirection;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
     public enum Direction {
         left,
         top,
         right,
         down,
     }
-    public static Direction Invert(Direction direction) throws Exception {
+
+    public static Direction invert(Direction direction) {
         switch (direction) {
             case left:
                 return Direction.right;
@@ -28,10 +47,11 @@ public class LazerData {
             case down:
                 return Direction.top;
             default:
-                throw new Exception("unrecognized direction");
+                throw new RuntimeException("unrecognized direction");
         }
     }
-    public static String ToString(Direction direction) throws Exception {
+
+    public static String toString(Direction direction) {
         switch (direction) {
             case left:
                 return "left";
@@ -42,19 +62,31 @@ public class LazerData {
             case down:
                 return "down";
             default:
-                throw new Exception("unrecognized direction");
+                throw new RuntimeException("unrecognized direction");
         }
     }
-    public static Random rand = Program.rand;
-    public static Direction NextRandom() {
-        return Direction.values()[rand.nextInt(4)];
+
+    public static final Random rand = new Random();
+
+    public static Direction nextRandom() {
+        return Direction.values()[rand.nextInt(Direction.values().length)];
     }
+
+    @Override
     public boolean equals(Object obj) {
-        return (obj instanceof LazerData data && data.GridDirection == GridDirection && data.Position == Position) || super.equals(obj);
+        if (obj instanceof LazerData) {
+            LazerData data = (LazerData) obj;
+            return data.gridDirection == gridDirection && data.position == position;
+        }
+        return super.equals(obj);
     }
+
+    @Override
     public String toString() {
-        return GridDirection.toString() + " " + Position;
+        return gridDirection.toString() + " " + position;
     }
+
+    @Override
     public int hashCode() {
         return super.hashCode();
     }

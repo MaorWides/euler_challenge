@@ -1,17 +1,24 @@
 package i0.sealights.octolazersJava;
+import org.parboiled.common.Tuple2;
+
 import java.util.Random;
 
 public class Main {
-    public static Random rand = new Random();
+    /**
+     * public random across the program
+     */
+    public static final Random rand = new Random();
+
     public static void main(String[] args) {
-        int[][] grid = Helpers.RndGrid(12, 12, 6);
+        String[][] grid = Helpers.rndGrid(12, 12, 6);
         Helpers.Update(grid);
-        int pos = rand.nextInt(1, grid.length);
-        LazerData.Direction direct = LazerData.NextRandom();
-        int[] shot = Helpers.Shoot(grid, pos, direct);
-        Helpers.Statically(pos +  ", " + LazerData.ToString(direct) + "\n" + shot[0] + ", " + LazerData.ToString(shot[1]));
+        int pos = rand.nextInt(grid.length) + 1;
+        LazerData.Direction direct = LazerData.nextRandom();
+        Tuple2<Integer, LazerData.Direction> shot = Helpers.Shoot(grid, pos, direct);
+        Helpers.statically(pos + ", " + LazerData.toString(direct) + "\n" + shot.a + ", " + LazerData.toString(shot.b));
+        System.console().readLine();
     }
 }
-//???/?\
-//???|?|????
-//???\_/
+//╔╦╗/‾\
+//╠╬╣|●|║═│─
+//╚╩╝\_/

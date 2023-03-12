@@ -1,70 +1,62 @@
 package i0.sealights.octolazersJava;
+import org.parboiled.common.Tuple2;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game {
-    public static String[][] AssumeSimple() {
+public class Game extends Helpers {
+    public static String[][] assumeSimple() {
         return new String[0][0];
     }
-    public static String[][] AssumeRandom() {
+
+    public static String[][] assumeRandom() {
         return new String[0][0];
     }
-    public static List<String[][]> AllPossibilities(PositionStruct position) {
-        return new ArrayList<>();
+
+    public static List<String[][]> allPossibilities(
+            Tuple2<Tuple2<Integer, LazerData.Direction>, Tuple2<Integer, LazerData.Direction>> position
+    ) {
+        return new ArrayList<String[][]>();
     }
-    public static List<(int x, int y)> BoardToPositions(String[][] positions) {
-        for (var pos : positions) {
+
+    public static List<Tuple2<Integer, Integer>> boardToPositions(String[][] positions) {
+        for (String[] pos : positions) {
 
         }
-        return new ArrayList<>();
+        return new ArrayList<Tuple2<Integer, Integer>>();
     }
-    public static List<(int x, int y)> BoardSSSToPositions(List<String[][]> positions) {
-        for (var pos : positions) {
+
+    public static List<Tuple2<Integer, Integer>> boardSSSToPositions(List<String[][]> positions) {
+        for (String[][] pos : positions) {
 
         }
-        return new ArrayList<>();
+        return new ArrayList<Tuple2<Integer, Integer>>();
     }
-    public static List<String[][]> PositionsToBoard(List<(int x, int y)> positions) {
-        for (var (x, y) : positions) {
+
+    public static List<String[][]> positionsToBoard(List<Tuple2<Integer, Integer>> positions) {
+        for (Tuple2<Integer, Integer> pos : positions) {
 
         }
-        return new ArrayList<>();
+        return new ArrayList<String[][]>();
     }
-    public static List<String[][]> PositionsToBoardSSS(List<(int x, int y)> positions) {
-        for (var (x, y) : positions) {
+
+    public static List<String[][]> positionsToBoardSSS(List<Tuple2<Integer, Integer>> positions) {
+        for (Tuple2<Integer, Integer> pos : positions) {
 
         }
-        return new ArrayList<>();
+        return new ArrayList<String[][]>();
     }
-    public static String[][] WhatWeKnowForSure() {
+
+    public static String[][] whatWeKnowForSure() {
         return new String[0][0];
     }
-    public static List<String[][]> SimpleProblemSolver(PositionStruct[] position, List<String[][]> grid) {
-        for (var item : position) {
-            if ((item.Start.Pos <= 2 || item.End.Pos <= 2) && item.Start.Direct != item.End.Direct) {
+
+    public static List<String[][]> simpleProblemSolver(Tuple2<Tuple2<Integer, LazerData.Direction>, Tuple2<Integer, LazerData.Direction>>[] position, List<String[][]> grid) {
+        for (Tuple2<Tuple2<Integer, LazerData.Direction>, Tuple2<Integer, LazerData.Direction>> item : position) {
+            if ((item.a.a <= 2 || item.b.a <= 2) && item.a.b != item.b.b) {
 
             }
         }
         return grid;
-    }
-}
-
-    internal record class PositionStruct(EdgeStruct Start, EdgeStruct End) {
-    public static implicit operator (EdgeStruct start, EdgeStruct end)(PositionStruct value) {
-        return (value.Start, value.End);
-    }
-
-    public static implicit operator PositionStruct((EdgeStruct start, EdgeStruct end) value) {
-        return new PositionStruct(value.start, value.end);
-    }
-}
-
-    internal record class EdgeStruct(int Pos, LazerData.Direction Direct) {
-    public static implicit operator (int pos, LazerData.Direction direct)(EdgeStruct value) {
-        return (value.Pos, value.Direct);
-    }
-
-    public static implicit operator EdgeStruct((int pos, LazerData.Direction direct) value) {
-        return new EdgeStruct(value.pos, value.direct);
     }
 }
