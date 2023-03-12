@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2f42dff-b36c-4049-866b-f610ebafddf0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/LazerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/LazerData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="d2f42dff-b36c-4049-866b-f610ebafddf0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
