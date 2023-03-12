@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d2f42dff-b36c-4049-866b-f610ebafddf0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/LazerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/LazerData.java" afterDir="false" />
@@ -64,7 +63,20 @@
       <recent name="i0.sealights" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EulerParameterizedTest.EnumSourceToCheckEulerString">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="i0.sealights.octolazersJava.Main" />
+      <module name="euler_challenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="i0.sealights.octolazersJava.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EulerParameterizedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="euler_challenge" />
       <extension name="coverage">
@@ -128,29 +140,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EulerParameterizedTest.correctlyDetermineIfANumberIsPrime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="euler_challenge" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="i0.sealights.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="i0.sealights" />
-      <option name="MAIN_CLASS_NAME" value="i0.sealights.EulerParameterizedTest" />
-      <option name="METHOD_NAME" value="correctlyDetermineIfANumberIsPrime(long)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.EulerParameterizedTest.EnumSourceToCheckEulerString" />
         <item itemvalue="JUnit.EulerParameterizedTest.MethodSourceToCheckEulerString" />
         <item itemvalue="JUnit.EulerParameterizedTest" />
         <item itemvalue="JUnit.EulerParameterizedTest.EnterNullIntoEulerCheck" />
-        <item itemvalue="JUnit.EulerParameterizedTest.correctlyDetermineIfANumberIsPrime" />
       </list>
     </recent_temporary>
   </component>
@@ -175,5 +171,264 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>523</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>777</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>772</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>767</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>762</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>756</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>751</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>746</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>741</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>736</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>731</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>724</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>719</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>714</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>709</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>702</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>697</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>692</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>687</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>682</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>677</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>671</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>666</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>661</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>656</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>651</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>646</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>641</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>636</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>631</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>624</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>619</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>614</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>609</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>604</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>599</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>591</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>586</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>581</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>576</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>570</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>565</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>560</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>555</line>
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>550</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>545</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>538</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>533</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java</url>
+          <line>528</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="grid[0]" />
+      </configuration>
+      <inline-watch fileUrl="file://$PROJECT_DIR$/src/main/java/i0/sealights/octolazersJava/Helpers.java" line="459">
+        <watch expression="grid" language="JAVA" />
+      </inline-watch>
+    </watches-manager>
   </component>
 </project>

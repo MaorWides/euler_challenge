@@ -1,4 +1,5 @@
 package i0.sealights.octolazersJava;
+
 import org.jline.terminal.Size;
 import org.parboiled.common.Tuple2;
 import org.jline.terminal.Terminal;
@@ -10,7 +11,6 @@ import java.util.Scanner;
 public class Helpers {
     public static int statsLine = 1;
     private static int sizehori = 0;
-
     /**
      * Generates a random grid
      * @param sizeh the horizontal size
@@ -104,7 +104,13 @@ public class Helpers {
                 fail = true;
             }
         }
-
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                if (grid[i][j] == null) {
+                    grid[i][j] = "";
+                }
+            }
+        }
         return grid;
     }
     /**
@@ -444,7 +450,7 @@ public class Helpers {
     public static void update(String[][] grid) throws IOException {
         Terminal term = TerminalBuilder.terminal();
         sizehori = grid.length * 4 + 20;
-        Runtime.getRuntime().exec("cls");
+        //Runtime.getRuntime().exec("cls");
         System.out.println("octolasers");
         term.setSize(new Size(sizehori + 100, (grid.length == 0 ? 0 : grid[0].length) * 2 + 30));
         //Console.CursorVisible = false;
@@ -510,81 +516,80 @@ public class Helpers {
             System.out.print("═══╩");
         }
         System.out.println("═══╝");
-//C# TO JAVA CONVERTER TASK: Java has no equivalent to C# deconstruction declarations:
-        Tuple2<Integer, Integer> pos = new Tuple2<>(term.getCursorPosition(null).getX(), term.getCursorPosition(null).getY());
+        //Tuple2<Integer, Integer> pos = new Tuple2<>(term.getCursorPosition(term.).getX(), term.getCursorPosition(null).getY());
         i = 0;
         j = 0;
         if (grid[i][j].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("●");
         }
         if (grid[i][j + 1].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("─");
         }
         if (grid[i + 1][j].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("│");
         }
         if (grid[i + 1][j + 1].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("/");
         }
         for (j = 1; j < (grid.length == 0 ? 0 : grid[i].length) - 1; j++)
         {
             if (grid[i][j - 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("─");
             }
             if (grid[i][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("●");
             }
             if (grid[i][j + 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("─");
             }
             if (grid[i + 1][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("│");
             }
             if (grid[i + 1][j + 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("/");
             }
             if (grid[i + 1][j - 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("\\");
             }
         }
         if (grid[i][j - 1].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("─");
         }
         if (grid[i][j].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("●");
         }
         if (grid[i + 1][j].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("│");
         }
         if (grid[i + 1][j - 1].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("\\");
         }
         for (i = 1; i < grid.length - 1; i++)
@@ -592,187 +597,187 @@ public class Helpers {
             j = 0;
             if (grid[i - 1][j + 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("\\");
             }
             if (grid[i - 1][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("│");
             }
             if (grid[i][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("●");
             }
             if (grid[i][j + 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("─");
             }
             if (grid[i + 1][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("│");
             }
             if (grid[i + 1][j + 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("/");
             }
             for (j = 1; j < grid.length - 1; j++)
             {
                 if (grid[i - 1][j + 1].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("\\");
                 }
                 if (grid[i - 1][j - 1].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("/");
                 }
                 if (grid[i - 1][j].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("│");
                 }
                 if (grid[i][j - 1].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("─");
                 }
                 if (grid[i][j].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("●");
                 }
                 if (grid[i][j + 1].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("─");
                 }
                 if (grid[i + 1][j].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("│");
                 }
                 if (grid[i + 1][j + 1].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("/");
                 }
                 if (grid[i + 1][j - 1].equals("●"))
                 {
-                    System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                    System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                     System.out.print("\\");
                 }
             }
             if (grid[i - 1][j - 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("/");
             }
             if (grid[i - 1][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("│");
             }
             if (grid[i][j - 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("─");
             }
             if (grid[i][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("●");
             }
             if (grid[i + 1][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("│");
             }
             if (grid[i + 1][j - 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("\\");
             }
         }
         j = 0;
         if (grid[i - 1][j + 1].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("\\");
         }
         if (grid[i - 1][j].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("│");
         }
         if (grid[i][j].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("●");
         }
         if (grid[i][j + 1].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("─");
         }
         for (j = 1; j < grid[i].length - 1; j++)
         {
             if (grid[i - 1][j + 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("\\");
             }
             if (grid[i - 1][j - 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("/");
             }
             if (grid[i - 1][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("│");
             }
             if (grid[i][j - 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("─");
             }
             if (grid[i][j].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("●");
             }
             if (grid[i][j + 1].equals("●"))
             {
-                System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+                System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
                 System.out.print("─");
             }
         }
         if (grid[i - 1][j - 1].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("/");
         }
         if (grid[i - 1][j].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("│");
         }
         if (grid[i][j - 1].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("─");
         }
         if (grid[i][j].equals("●"))
         {
-            System.out.print(String.format("%c[%d;%df",0x1B,gridify(i + 1, j + 1).a, gridify(i + 1, j + 1).b));
+            System.out.print("\033[" + gridify(i + 1, j + 1).a + ";" + gridify(i + 1, j + 1).b + "H");
             System.out.print("●");
         }
-        System.out.print(String.format("%c[%d;%df",0x1B,pos.a, pos.b));
+        //System.out.print(String.format("%c[%d;%df",0x1B,pos.a, pos.b));
     }
 }
