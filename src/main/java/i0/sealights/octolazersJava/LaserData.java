@@ -2,14 +2,14 @@ package i0.sealights.octolazersJava;
 
 import java.util.Random;
 
-public class LazerData {
+public class LaserData {
     public Direction gridDirection;
     public int position;
-    public LazerData(Direction gridDirection, int position) {
+    public LaserData(Direction gridDirection, int position) {
         this.gridDirection = gridDirection;
         this.position = position;
     }
-    public LazerData(int position, Direction gridDirection) {
+    public LaserData(int position, Direction gridDirection) {
         this.gridDirection = gridDirection;
         this.position = position;
     }
@@ -65,8 +65,8 @@ public class LazerData {
     }
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof LazerData) {
-            LazerData data = (LazerData) obj;
+        if (obj instanceof LaserData) {
+            LaserData data = (LaserData) obj;
             return data.gridDirection == gridDirection && data.position == position;
         }
         return super.equals(obj);

@@ -13,9 +13,9 @@ public class Main {
         String[][] grid = Helpers.rndGrid(12, 12, 6);
         Helpers.update(grid);
         int pos = rand.nextInt(grid.length) + 1;
-        LazerData.Direction direct = LazerData.nextRandom();
-        Tuple2<Integer, LazerData.Direction> shot = Helpers.Shoot(grid, pos, direct);
-        Helpers.statically(pos + ", " + LazerData.toString(direct) + "\n" + shot.a + ", " + LazerData.toString(shot.b));
+        LaserData.Direction direct = LaserData.nextRandom();
+        Tuple2<Integer, LaserData.Direction> shot = Helpers.Shoot(grid, pos, direct);
+        Helpers.statically(pos + ", " + LaserData.toString(direct) + "\n" + shot.a + ", " + LaserData.toString(shot.b));
         System.console().readLine();
     }
 }

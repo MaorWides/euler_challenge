@@ -321,7 +321,7 @@ public class Helpers {
      * @param LeftTopRightDown
      * @return
      */
-    public static Tuple2<Integer, Integer> advance(Tuple2<Integer, Integer> pos, LazerData.Direction LeftTopRightDown) {
+    public static Tuple2<Integer, Integer> advance(Tuple2<Integer, Integer> pos, LaserData.Direction LeftTopRightDown) {
         switch (LeftTopRightDown) {
             case left:
                 pos = new Tuple2<>(pos.a + 1, pos.b);
@@ -347,8 +347,8 @@ public class Helpers {
      * @param entryLeftTopRightDown
      * @return
      */
-    public static Tuple2<Integer, LazerData.Direction> Shoot(String[][] grid, int entry, LazerData.Direction entryLeftTopRightDown) {
-        Tuple2<Integer, LazerData.Direction> exit = new Tuple2(0, entryLeftTopRightDown);
+    public static Tuple2<Integer, LaserData.Direction> Shoot(String[][] grid, int entry, LaserData.Direction entryLeftTopRightDown) {
+        Tuple2<Integer, LaserData.Direction> exit = new Tuple2(0, entryLeftTopRightDown);
 //C# TO JAVA CONVERTER TASK: Tuple variables are not converted by C# to Java Converter:
         Tuple2<Integer, Integer> point = new Tuple2<>(0, 0);
         switch (entryLeftTopRightDown)
@@ -379,11 +379,11 @@ public class Helpers {
                     }
                     else if (point.b < grid.length - 1 && point.a < grid.length - 1 && grid[point.a + 1][point.b + 1].equals("●"))
                     {
-                        exit = new Tuple2<>(exit.a, LazerData.Direction.down);
+                        exit = new Tuple2<>(exit.a, LaserData.Direction.down);
                     }
                     else if (point.b > 0 && point.a < grid.length - 1 && grid[point.a + 1][point.b - 1].equals("●"))
                     {
-                        exit = new Tuple2<>(exit.a, LazerData.Direction.top);
+                        exit = new Tuple2<>(exit.a, LaserData.Direction.top);
                     }
                     point = advance(point, exit.b);
                     break;
@@ -394,11 +394,11 @@ public class Helpers {
                     }
                     else if (point.b < grid.length - 1 && point.a < grid.length - 1 && grid[point.a + 1][point.b + 1].equals("●"))
                     {
-                        exit = new Tuple2<>(exit.a, LazerData.Direction.right);
+                        exit = new Tuple2<>(exit.a, LaserData.Direction.right);
                     }
                     else if (point.b < grid.length - 1 && point.a > 0 && grid[point.a - 1][point.b + 1].equals("●"))
                     {
-                        exit = new Tuple2<>(exit.a, LazerData.Direction.left);
+                        exit = new Tuple2<>(exit.a, LaserData.Direction.left);
                     }
                     point = advance(point, exit.b);
                     break;
@@ -409,11 +409,11 @@ public class Helpers {
                     }
                     else if (point.a > 0 && point.b < grid.length - 1 && grid[point.a - 1][point.b + 1].equals("●"))
                     {
-                        exit = new Tuple2<>(exit.a, LazerData.Direction.top);
+                        exit = new Tuple2<>(exit.a, LaserData.Direction.top);
                     }
                     else if (point.a > 0 && point.b > 0 && grid[point.a - 1][point.b - 1].equals("●"))
                     {
-                        exit = new Tuple2<>(exit.a, LazerData.Direction.down);
+                        exit = new Tuple2<>(exit.a, LaserData.Direction.down);
                     }
                     point = advance(point, exit.b);
                     break;
@@ -424,11 +424,11 @@ public class Helpers {
                     }
                     else if (point.b > 0 && point.a < grid.length - 1 && grid[point.a + 1][point.b - 1].equals("●"))
                     {
-                        exit = new Tuple2<>(exit.a, LazerData.Direction.left);
+                        exit = new Tuple2<>(exit.a, LaserData.Direction.left);
                     }
                     else if (point.b > 0 && point.a > 0 && grid[point.a - 1][point.b - 1].equals("●"))
                     {
-                        exit = new Tuple2<>(exit.a, LazerData.Direction.right);
+                        exit = new Tuple2<>(exit.a, LaserData.Direction.right);
                     }
                     point = advance(point, exit.b);
                     break;
@@ -436,7 +436,7 @@ public class Helpers {
                     break;
             }
         } while (point.a >= 0 && point.b >= 0 && point.a <= grid.length - 1 && point.b <= grid.length - 1);
-        if (exit.b == LazerData.Direction.left || exit.b == LazerData.Direction.right)
+        if (exit.b == LaserData.Direction.left || exit.b == LaserData.Direction.right)
         {
             exit = new Tuple2<>(point.b, exit.b);
         }
@@ -444,7 +444,7 @@ public class Helpers {
         {
             exit = new Tuple2<>(point.a, exit.b);
         }
-        exit = new Tuple2<>(exit.a, LazerData.invert(exit.b));
+        exit = new Tuple2<>(exit.a, LaserData.invert(exit.b));
         return exit;
     }
     public static void update(String[][] grid) throws IOException {

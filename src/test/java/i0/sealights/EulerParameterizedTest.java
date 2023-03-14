@@ -37,11 +37,6 @@ public class EulerParameterizedTest extends EulerBaseTest{
         assertTrue(!eulerSolver.isStringEuler(nulls));
     }
     @ParameterizedTest
-    @EnumSource(names = { "word", "simple", "Euler" })
-    void EnumSourceToCheckEulerString(String words){
-        assertTrue(eulerSolver.isStringEuler(words));
-    }
-    @ParameterizedTest
     @MethodSource("RandomWordProvider")
     void MethodSourceToCheckEulerString(String words){
         assertTrue(eulerSolver.isStringEuler(words));
